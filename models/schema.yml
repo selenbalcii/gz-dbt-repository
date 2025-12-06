@@ -5,7 +5,21 @@ sources:
     database: selenbalci
     schema: raw_data
     tables:
-      - name: raw_gz_sales
-      - name: raw_gz_product
-      - name: raw_gz_ship
-  
+      - name: sales
+        identifier: raw_gz_sales
+        description: sales of Greenweez / we have on row per product_id found in each orders_id
+        columns:
+          - name: date_date
+            description: date of purchase
+      - name: product
+        identifier: raw_gz_product
+        description: products in Greenweez
+        columns:
+          - name: products_id
+            description: identification numbers of the products
+      - name: ship
+        identifier: raw_gz_ship
+        description: shipping informmation Greenweez
+        columns:
+          - name: orders_id
+            description: shipping order identification
